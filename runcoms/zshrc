@@ -11,3 +11,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+#
+# Autocompletion interface
+zstyle ':completion:*' menu select
+
+# Complete aliases
+setopt COMPLETE_ALIASES
+
+# Command completion
+autoload -U compinit
+compinit
+
+source ~/.zsh/aliases.zsh
+source ~/.zsh/environment.zsh
